@@ -10,6 +10,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
+app.get('/', (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: 'Welcome to the School Management API! The server is running successfully.',
+    });
+});
+
 // Routes
 app.use('/', schoolRoutes);
 
