@@ -51,13 +51,15 @@ Create a `.env` file in the root directory (already included if testing locally)
 
 ```
 PORT=5000
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=
-DB_NAME=school_management
+DB_HOST=mysql-xxxxxxxx-your-aiven-project.aivencloud.com
+DB_PORT=24675
+DB_USER=avnadmin
+DB_PASSWORD=your_aiven_password
+DB_NAME=defaultdb
+DB_SSL=true
 ```
 
-> Note: Make sure to update `DB_PASSWORD`, `DB_USER`, and `DB_HOST` according to your MySQL configuration.
+> Note: The project is currently configured to connect securely to an **Aiven MySQL** service. Make sure your local network allows outbound connections to the provided port, and that your IP address is allowed in your Aiven service settings.
 
 ## Running the Project
 
@@ -73,6 +75,10 @@ npm run dev
 ```
 
 ## API Documentation
+
+**Live Postman Documentation**: [View Postman Docs](https://documenter.getpostman.com/view/37563529/2sBXqDs2ux)
+
+**Deployed API Base URL (Render)**: `[Insert Render URL here later]`
 
 ### 1. Add School API
 - **Description**: Adds a new school to the database. Validates all inputs including geographical bounds.
